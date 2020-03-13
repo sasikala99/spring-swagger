@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: spring-eureka
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+  devtools:
+    add-properties: false
+        
+
+    
+server:
+  port: 8761
+  servlet:
+    context-path: /
+  
+
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false  
+    
+    
+zuul:
+  prefix: /api
+  routes:
+    spring-service:
+       url: http://localhost:1990/
+       path: /spring-service/**
+    spring-consumer:
+       url: http://localhost:1991/
+       path: /spring-consumer/**
+
+      
