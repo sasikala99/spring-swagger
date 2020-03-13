@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: springboot-thymeleaf-example
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/sampletest
+    username: postgres
+    password: onward@123
+  jpa:
+    hibernate:
+      ddl-auto: update    
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+    
+server:
+  port: 1990
+  
+  
+management:
+  security:
+    enabled: false
+    
+    
+  
+  
+  
+  
