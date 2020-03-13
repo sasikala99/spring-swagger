@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: spring-service  datasource:    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/boot
+    username: postgres
+    password: onward@123
+    
+server:  port: 1990
+  
+eureka:  client:    register-with-eureka: false
+    fetch-registry: false    service-url:       defaultZone: http://localhost:1992/eureka
+    instance:
+       hostname: localhost
